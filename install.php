@@ -6,8 +6,11 @@ use Composer\Script\Event;
 
 class Install
 {
-  public static function install(Event $event)
+  public static function postPackageInstall(Event $event)
   {
+    $installedPackage = $event->getOperation()->getPackage();
+    var_dump($installedPackage);exit();
+
     $config = require 'config.php';
 
     self::copy(__DIR__ ."/Web", $config['web_dir']);

@@ -9,7 +9,10 @@ class Install
   public static function postPackageInstall(Event $event)
   {
     $installedPackage = $event->getOperation()->getPackage();
-    var_dump($installedPackage);exit();
+    if($installedPackage->getPackageName() != 'marvin/core')
+    {
+      return false;
+    }
 
     $config = require 'config.php';
 

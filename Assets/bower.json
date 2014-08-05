@@ -1,0 +1,26 @@
+{
+  "name": "marvin",
+  "version": "0.0.1",
+  "authors": [
+    "Pavel Linkesch <pavel.linkesch@gmail.com>"
+  ],
+  "description": "Micro CMS based on Silex framework",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1",
+    "bootstrap": "~3.1.1"
+  },
+  "devDependencies": {
+    "qunit": "~1.14.0",
+    "sinon-qunit": "~2.0.0",
+    "sinon": "~1.10.2"
+  }
+}

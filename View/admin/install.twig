@@ -1,0 +1,15 @@
+{% extends "admin/layout.twig" %}
+
+{% block menu %}{% endblock %}
+
+{% block content %}
+    <header class="page-header">
+        <h1>Installation</h1>
+    </header>
+
+    <ul class="list-group">
+        {% for message in messages %}
+            <li class="list-group-item {{ message.type }}">{{message.text|raw}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

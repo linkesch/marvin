@@ -1,0 +1,43 @@
+$icon-font-path: '../bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/';
+
+@import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss";
+
+main {
+    padding-top: 50px;
+}
+
+.list-group-item.success {
+    @extend .list-group-item-success;
+}
+
+.list-group-item.failure {
+    @extend .list-group-item-danger;
+}
+
+#form {
+    >div {
+        @extend .form-group;
+        input, textarea {
+            @extend .form-control;
+        }
+    }
+}
+
+.table-striped {
+  &.striped-even {
+    > tbody > tr {
+      &:nth-child(odd) {
+        > td,
+        > th {
+          background-color: transparent;
+        }
+      }
+      &:nth-child(even) {
+        > td,
+        > th {
+          background-color: $table-bg-accent;
+        }
+      }
+    }
+  }
+}

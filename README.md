@@ -30,34 +30,47 @@ It's distributed via [Composer](https://getcomposer.org/) (coming soon to [Packa
 And the best part? It's **open source and free under MIT license**.
 
 
+## Plugins
+
+Marvin consists of separate plugins, so for each project you can pick precisely only what you need.
+
+Currently available plugins:
+
+- Core *
+- [Pages](https://github.com/orthes/marvin-pages) *
+- [Users](https://github.com/orthes/marvin-users) *
+
+Plugins marked with an asterisk (*) are core necessary files needed for Marvin's basic functioning.
+
+
 ## Installation
 
 1. Install [Composer](https://getcomposer.org)
 2. Create in your project folder file **composer.json** with this content:
 ```
 {
-    "require": {
-      "marvin/core": "dev-master",
-      "marvin/pages": "dev-master",
-      "marvin/users": "dev-master"
+  "require": {
+    "marvin/core": "dev-master",
+    "marvin/pages": "dev-master",
+    "marvin/users": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/orthes/marvin-core"
     },
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/orthes/marvin-core"
-      },
-      {
-        "type": "vcs",
-        "url": "https://github.com/orthes/marvin-pages"
-      },
-      {
-        "type": "vcs",
-        "url": "https://github.com/orthes/marvin-users"
-      }
-    ],
-    "scripts": {
-      "post-package-install": "Marvin\\Core\\Install::postPackageInstall"
+    {
+      "type": "vcs",
+      "url": "https://github.com/orthes/marvin-pages"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/orthes/marvin-users"
     }
+  ],
+  "scripts": {
+    "post-package-install": "Marvin\\Core\\Install::postPackageInstall"
+  }
 }
 ```
 3. Run ```composer install``` command

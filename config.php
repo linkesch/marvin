@@ -6,6 +6,7 @@ $config['base_dir'] = __DIR__.'/../../..';
 $config['app_dir'] = $config['base_dir'] .'/app';
 $config['data_dir'] = $config['base_dir'] .'/data';
 $config['themes_dir'] = $config['base_dir'] .'/app/themes';
+$config['web_dir'] = $config['base_dir'] .'/web';
 $config['theme'] = 'default';
 $config['db']['path'] = $config['data_dir'] . ($config['env'] == 'test' ? '/test.db' : '/app.db');
 $config['db']['name'] = 'marvin';

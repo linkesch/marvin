@@ -30,5 +30,8 @@
         "psr-4": {
             "Marvin\\Core\\": ""
         }
+    },
+    "scripts": {
+        "post-install-cmd": "Marvin\\Core\\Install::install"
     }
 }

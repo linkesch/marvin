@@ -32,6 +32,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "Marvin\\Core\\Install::install"
+        "post-package-install": "Marvin\\Core\\Install::install"
     }
 }

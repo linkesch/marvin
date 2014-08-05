@@ -2,11 +2,13 @@
     "name": "marvin/core",
     "description": "Micro CMS based on Silex framework - Core files",
     "version": "0.0.1",
+    "homepage": "http://github.com/orthes/marvin-core",
     "license": "MIT",
     "authors": [
         {
             "name": "Pavel Linkesch",
-            "email": "pavel.linkesch@gmail.com"
+            "email": "pavel.linkesch@gmail.com",
+            "homepage": "http://linkesch.sk"
         }
     ],
     "require": {
@@ -23,11 +25,21 @@
         "symfony/browser-kit": ">=2.3,<2.4-dev",
         "symfony/css-selector": "2.4.4",
         "symfony/security": "~2.3",
-        "marvin/pages": "~0.0.1",
-        "marvin/users": "~0.0.1"
+        "marvin/pages": "dev-master",
+        "marvin/users": "dev-master"
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/orthes/marvin-pages"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/orthes/marvin-users"
+      }
+    ],
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Marvin\\Core\\": ""
         }
     }

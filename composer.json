@@ -27,7 +27,7 @@
         "marvin/users": "~0.0.1"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Marvin\\Core\\": ""
         }
     }

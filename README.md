@@ -49,9 +49,7 @@ Plugins marked with an asterisk (*) are core necessary files needed for Marvin's
 ```
 {
   "require": {
-    "marvin/marvin": "dev-master",
-    "marvin/pages": "dev-master",
-    "marvin/users": "dev-master"
+    "marvin/marvin": "dev-master"
   },
   "scripts": {
     "post-package-install": "Marvin\\Marvin\\Install::postPackageInstall"

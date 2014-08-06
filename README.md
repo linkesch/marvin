@@ -48,6 +48,7 @@ Plugins marked with an asterisk (*) are core necessary files needed for Marvin's
 2. Create in your project folder file **composer.json** with this content:
 ```
 {
+  "minimum-stability": "dev",
   "require": {
     "marvin/marvin": "dev-master"
   },

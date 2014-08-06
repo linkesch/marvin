@@ -1,6 +1,6 @@
 {
     "name": "marvin/core",
-    "description": "Micro CMS based on Silex framework - Core files",
+    "description": "PHP micro CMS based on Silex framework - Core files",
     "version": "0.0.1",
     "homepage": "http://github.com/orthes/marvin-core",
     "license": "MIT",

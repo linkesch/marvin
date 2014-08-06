@@ -82,6 +82,14 @@ That's it. Now you can visit your new website powered by Marvin in a browser. Yo
 automatically run final installation steps and you are ready to go.
 
 
+# Administration
+
+Administration could be found in **/admin** folder. Default administrator's credentials are:
+
+- Username: **admin**
+- Password: **foo**
+
+
 ## Warning
 
 Marvin is currently under intense development and is not ready to use in a production yet.

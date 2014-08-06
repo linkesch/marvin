@@ -12,4 +12,11 @@
             <li class="list-group-item {{ message.type }}">{{message.text|raw}}</li>
         {% endfor %}
     </ul>
+
+    <p>Now you can start editing your website in administration here: <a href="/admin">/admin</a></p>
+    <ul>
+        <li>Username: <strong>admin</strong></li>
+        <li>Password: <strong>foo</strong></li>
+    </ul>
+    <p>Please, remember to change admin's password as soon as possible!</p>
 {% endblock %}

@@ -7,6 +7,8 @@ $config['app_dir'] = $config['base_dir'] .'/app';
 $config['data_dir'] = $config['base_dir'] .'/data';
 $config['themes_dir'] = $config['base_dir'] .'/app/themes';
 $config['web_dir'] = $config['base_dir'] .'/web';
+$config['upload_dir'] = $config['web_dir'] .'/uploads';
+$config['public_upload_dir'] = '/uploads';
 $config['theme'] = 'default';
 $config['db']['path'] = $config['data_dir'] . ($config['env'] == 'test' ? '/test.db' : '/app.db');
 $config['db']['name'] = 'marvin';

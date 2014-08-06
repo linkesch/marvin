@@ -25,7 +25,7 @@ Default database is set to [SQLite](http://www.sqlite.org), but thank's to Silex
 
 Frontend is build using famous [Bootstrap](http://getbootstrap.com), so you don't have to learn new conventions even here.
 
-It's distributed via [Composer](https://getcomposer.org/) (coming soon to [Packagist](https://packagist.org), too...) and frontend uses full advantage of [Grunt](http://gruntjs.com) and [Bower](http://bower.io).
+It's distributed via [Composer](https://getcomposer.org/) and frontend uses full advantage of [Grunt](http://gruntjs.com) and [Bower](http://bower.io).
 
 And the best part? It's **open source and free under MIT license**.
 

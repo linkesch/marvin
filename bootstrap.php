@@ -16,5 +16,11 @@ require __DIR__ .'/providers.php';
 require __DIR__ .'/plugins.php';
 
 
+// Load custom scripts
+if(file_exists($app['config']['app_dir'] .'/bootstrap.php'))
+{
+    require $app['config']['app_dir'] .'/bootstrap.php';
+}
+
 // Return app
 return $app;

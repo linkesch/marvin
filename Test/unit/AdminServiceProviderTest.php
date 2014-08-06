@@ -1,6 +1,6 @@
 <?php
 
-use Marvin\Core\Test\FunctionalTestCase;
+use Marvin\Marvin\Test\FunctionalTestCase;
 
 class AdminServiceProviderTest extends FunctionalTestCase
 {

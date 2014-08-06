@@ -36,7 +36,6 @@ Marvin consists of separate plugins, so for each project you can pick precisely 
 
 Currently available plugins:
 
-- Core *
 - [Pages](https://github.com/orthes/marvin-pages) *
 - [Users](https://github.com/orthes/marvin-users) *
 
@@ -50,26 +49,12 @@ Plugins marked with an asterisk (*) are core necessary files needed for Marvin's
 ```
 {
   "require": {
-    "marvin/core": "dev-master",
+    "marvin/marvin": "dev-master",
     "marvin/pages": "dev-master",
     "marvin/users": "dev-master"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/orthes/marvin-core"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/orthes/marvin-pages"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/orthes/marvin-users"
-    }
-  ],
   "scripts": {
-    "post-package-install": "Marvin\\Core\\Install::postPackageInstall"
+    "post-package-install": "Marvin\\Marvin\\Install::postPackageInstall"
   }
 }
 ```

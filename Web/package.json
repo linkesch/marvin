@@ -1,7 +1,7 @@
 {
-  "name": "marvin-core",
+  "name": "marvin",
   "version": "0.0.1",
-  "description": "Micro CMS based on Silex framework",
+  "description": "PHP micro CMS based on Silex framework",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.4",

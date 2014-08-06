@@ -1,6 +1,6 @@
 <?php
 
-namespace Marvin\Core;
+namespace Marvin\Marvin;
 
 use Composer\Script\Event;
 
@@ -9,7 +9,7 @@ class Install
   public static function postPackageInstall(Event $event)
   {
     $installedPackage = $event->getOperation()->getPackage();
-    if($installedPackage->getName() != 'marvin/core')
+    if($installedPackage->getName() != 'marvin/marvin')
     {
       return false;
     }

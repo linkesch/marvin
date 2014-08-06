@@ -1,6 +1,6 @@
 <?php
 
-namespace Marvin\Core\Controller;
+namespace Marvin\Marvin\Controller;
 
 use Silex\Application;
 use Silex\ControllerProviderInterface;

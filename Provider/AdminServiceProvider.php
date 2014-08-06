@@ -1,6 +1,6 @@
 <?php
 
-namespace Marvin\Core\Provider;
+namespace Marvin\Marvin\Provider;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;

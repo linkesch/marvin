@@ -1,6 +1,6 @@
 <?php
 
-namespace Marvin\Core\Test;
+namespace Marvin\Marvin\Test;
 
 use Silex\WebTestCase;
 

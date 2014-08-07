@@ -19,26 +19,41 @@
 
     <body>
 
-        <main role="main" class="container">
-            <div class="row">
+        <div class="container">
+            <header class="header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <ul class="nav nav-pills pull-right collapse navbar-collapse">
+                    {% for item in app.menu %}
+                        <li{% if item.slug == app.request.get('slug') or (loop.first and app.request.get('slug') == '') %} class="active"{% endif %}>
+                            <a href="{% if loop.first %}{{ path('page') }}{% else %}{{ path('page', { slug: item.slug }) }}{% endif %}">{{ item.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <h3 class="text-muted">Default Marvin Theme</h3>
+            </header>
+
+            <main class="row">
                 <div class="col-md-12">
-
-                    <nav>
-                        <ul>
-                            {% for item in app.menu %}
-                                <li><a href="{{ path('page', { slug: item.slug}) }}">{{ item.name }}</a>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-
                     {% block content %}{% endblock %}
                 </div>
-            </div>
-        </main>
+            </main>
+
+            <footer class="footer">
+                <div class="row">
+                    <div class="col-md-6">&copy; Default Marvin Theme 2014</div>
+                    <div class="col-md-6 text-right">Powered by <a href="http://github.com/orthes/marvin" target="_blank">Marvin</a>, open source micro CMS</div>
+                </div>
+            </footer>
+        </div>
 
         {% block javascripts %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-            <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="/assets/marvin/marvin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         {% endblock %}
     </body>
 </html>

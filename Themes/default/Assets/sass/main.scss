@@ -1,5 +1,66 @@
 @import "../../../marvin/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss";
 
-h1 {
-    color: red;
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header {
+  @include clearfix();
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+  h3 {
+    padding-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+}
+
+.navbar-toggle {
+  border-color: #e5e5e5;
+  .icon-bar {
+    background-color: $link-color;
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (max-width: 768px) {
+  .header .nav {
+    width: 100%;
+    padding: 0;
+    > li {
+      float: none;
+      + li {
+        margin-top: 2px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

@@ -42,15 +42,23 @@ Currently available plugins:
 Plugins marked with an asterisk (*) are core necessary files needed for Marvin's basic functioning.
 
 
-## Installation
+## Download and Installation
+
+### Via an Archive
+
+The best way to download and install Marvin is via Composer (see lower), but if you're not comfortable with it,
+you can start by downloading an archive with everything included: [Download Marvin 0.0.2 as **ZIP**](https://github.com/orthes/marvin/releases/download/0.0.2/marvin.zip).
+
+### Via Composer
+
+The **recommended** way to start with Marvin is via Composer:
 
 1. Install [Composer](https://getcomposer.org)
 2. Create in your project folder file **composer.json** with this content:
 ```
 {
-  "minimum-stability": "dev",
   "require": {
-    "marvin/marvin": "dev-master"
+    "marvin/marvin": "~0.0.2"
   },
   "scripts": {
     "post-package-install": "Marvin\\Marvin\\Install::postPackageInstall"

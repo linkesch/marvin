@@ -22,5 +22,5 @@ $app->mount('/install', new Marvin\Marvin\Controller\InstallControllerProvider()
 
 foreach($app['config']['plugins'] as $plugin)
 {
-    require __DIR__ .'/../'. ucfirst($plugin) .'/bootstrap.php';
+    require __DIR__ .'/../'. $plugin .'/bootstrap.php';
 }

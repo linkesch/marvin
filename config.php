@@ -36,6 +36,8 @@ $config['twig']['paths'][] = $config['themes_dir'];
 foreach($config['plugins'] as $plugin)
 {
     $pluginViews = __DIR__ .'/../'. ucfirst($plugin) .'/View';
+    $pluginViews = file_exists($pluginViews) ? $pluginViews : $config['app_dir'] .'/'. ucfirst($plugin) .'/View';
+
     if(file_exists($pluginViews))
     {
         $config['twig']['paths'][] = $pluginViews;

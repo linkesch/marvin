@@ -22,5 +22,11 @@ $app->mount('/install', new Marvin\Marvin\Controller\InstallControllerProvider()
 
 foreach($app['config']['plugins'] as $plugin)
 {
-    require __DIR__ .'/../'. $plugin .'/bootstrap.php';
+    $pluginBootstrap = __DIR__ .'/../'. $plugin .'/bootstrap.php';
+    $pluginBootstrap = file_exists($pluginBootstrap) ? $pluginBootstrap : $config['app_dir'] .'/'. $plugin .'/bootstrap.php';
+
+    if(file_exists($pluginBootstrap))
+    {
+        require $pluginBootstrap;
+    }
 }

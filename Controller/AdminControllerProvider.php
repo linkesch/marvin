@@ -15,7 +15,7 @@ class AdminControllerProvider implements ControllerProviderInterface
 
         // Homepage
         $controllers->get('/', function () use ($app) {
-            return $app->redirect('/admin/pages');
+            return $app->redirect('/admin/'. $app['config']['plugins'][0]);
         });
 
         return $controllers;

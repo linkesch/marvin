@@ -1,7 +1,6 @@
 {
     "name": "marvin/marvin",
     "description": "PHP micro CMS based on Silex framework",
-    "version": "0.0.3",
     "homepage": "http://github.com/orthes/marvin",
     "license": "MIT",
     "authors": [
@@ -36,5 +35,11 @@
     },
     "scripts": {
         "post-package-install": "Marvin\\Marvin\\Install::postPackageInstall"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0-dev"
+        }
     }
 }

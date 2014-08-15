@@ -24,20 +24,24 @@ main {
 }
 
 .table-striped {
-  &.striped-even {
-    > tbody > tr {
-      &:nth-child(odd) {
-        > td,
-        > th {
-          background-color: transparent;
+    &.striped-even {
+        > tbody > tr {
+            &:nth-child(odd) {
+                > td,
+                > th {
+                    background-color: transparent;
+                }
+            }
+            &:nth-child(even) {
+                > td,
+                > th {
+                    background-color: $table-bg-accent;
+                }
+            }
         }
-      }
-      &:nth-child(even) {
-        > td,
-        > th {
-          background-color: $table-bg-accent;
-        }
-      }
     }
-  }
+}
+
+.form-horizontal .control-label {
+    text-align: left;
 }

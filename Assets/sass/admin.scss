@@ -45,3 +45,10 @@ main {
 .form-horizontal .control-label {
     text-align: left;
 }
+
+.form-group {
+    .help-block {
+        padding: 0;
+        list-style: none;
+    }
+}

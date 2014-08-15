@@ -35,8 +35,8 @@ $config['twig']['paths'][] = $config['themes_dir'];
 // Add plugins views to twig paths
 foreach($config['plugins'] as $plugin)
 {
-    $pluginViews = __DIR__ .'/../'. ucfirst($plugin) .'/View';
-    $pluginViews = file_exists($pluginViews) ? $pluginViews : $config['app_dir'] .'/'. ucfirst($plugin) .'/View';
+    $pluginViews = __DIR__ .'/../'. $plugin .'/View';
+    $pluginViews = file_exists($pluginViews) ? $pluginViews : $config['app_dir'] .'/'. $plugin .'/View';
 
     if(file_exists($pluginViews))
     {

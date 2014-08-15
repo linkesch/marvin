@@ -13,19 +13,19 @@ class AdminServiceProvider implements ServiceProviderInterface
             return array();
         };
 
-        $app['install_status'] = $app->protect(function ($condition, $success, $failure) {
+        $app['install_status'] = $app->protect(function ($condition, $success, $failure) use ($app) {
             if($condition)
             {
                 $result = array(
                     'type' => 'success',
-                    'text' => $success,
+                    'text' => $app['translator']->trans($success),
                 );
             }
             else
             {
                 $result = array(
                     'type' => 'failure',
-                    'text' => $failure,
+                    'text' => $app['translator']->trans($failure),
                 );
             }
 

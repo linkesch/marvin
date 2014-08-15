@@ -4,7 +4,7 @@
 
 {% block content %}
     <header class="page-header">
-        <h1>Installation</h1>
+        <h1>{{ 'Installation'|trans }}</h1>
     </header>
 
     <ul class="list-group">
@@ -13,10 +13,10 @@
         {% endfor %}
     </ul>
 
-    <p>Now you can start editing your website in administration here: <a href="/admin">/admin</a></p>
+    <p>{{ 'Now you can start editing your website in administration here'|trans }}: <a href="/admin">/admin</a></p>
     <ul>
-        <li>Username: <strong>admin</strong></li>
-        <li>Password: <strong>foo</strong></li>
+        <li>{{ 'Username'|trans }}: <strong>admin</strong></li>
+        <li>{{ 'Password'|trans }}: <strong>foo</strong></li>
     </ul>
-    <p>Please, remember to change admin's password as soon as possible!</p>
+    <p>{{ 'Please, remember to change admin\'s password as soon as possible!'|trans }}</p>
 {% endblock %}

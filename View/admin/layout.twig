@@ -37,7 +37,7 @@
                   {% if item != 'users' %}
                     <li {% if item in app.request.get('_route') %}
                       class="active"
-                    {% endif %}><a href="/admin/{{ item }}">{{ item|capitalize }}</a></li>
+                    {% endif %}><a href="/admin/{{ item }}">{{ item|capitalize|trans }}</a></li>
                   {% endif %}
                 {%  endfor %}
               </ul>
@@ -45,9 +45,9 @@
                 {% if 'users' in app.config.plugins %}
                   <li {% if 'users' in app.request.get('_route') %}
                     class="active"
-                  {% endif %}><a href="/admin/users">Users</a></li>
+                  {% endif %}><a href="/admin/users">{{ 'Users'|trans }}</a></li>
                 {% endif %}
-                <li><a href="{{ path('admin_logout') }}">Logout</a></li>
+                <li><a href="{{ path('admin_logout') }}">{{ 'Logout'|trans }}</a></li>
               </ul>
             </div>
         {% endblock %}

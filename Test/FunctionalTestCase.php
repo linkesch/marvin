@@ -22,7 +22,7 @@ class FunctionalTestCase extends WebTestCase
     {
         $crawler = $client->request('GET', '/login');
 
-        $form = $crawler->selectButton('Sign in')->form();
+        $form = $crawler->selectButton('login')->form();
         $crawler = $client->submit($form, array(
             '_username' => 'admin',
             '_password' => 'foo',

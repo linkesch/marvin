@@ -16,7 +16,15 @@ make users just confused, it enables them to screw things up and that makes them
 
 ## What is Marvin?
 
-Marvin is not yet another CMS you need to learn from ground up. It is based on wonderful [Silex framework](http://silex.sensiolabs.org)
+> Marvin: "I am at a rough estimate thirty billion times more intelligent than you. Let me give you an example. Think of a number, any number."
+>
+> Zem: "Er, five."
+>
+> Marvin: "Wrong. You see?"
+
+Marvin is [a robot with a brain big as a planet](http://en.wikipedia.org/wiki/Marvin_the_Paranoid_Android) and also a simple CMS for PHP 5.3.
+
+But Marvin is not yet another CMS you need to learn from ground up. It is based on wonderful [Silex framework](http://silex.sensiolabs.org)
 which is build on the shoulders of Symfony2 and Pimple. That means it's fully tested and verified by thousands of developers.
 
 Marvin is developed with **Test Driven Development (TDD)** approach using [PHPUnit](http://phpunit.de) for testing backend and [QUnit](http://qunitjs.com) for testing JavaScript.

@@ -1,0 +1,61 @@
+{% extends "admin/layout.twig" %}
+
+{% block header %}{% endblock %}
+{% block menu %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <header class="page-header">
+                <h1>DON'T PANIC</h1>
+                <h3>{% if 404 == code %}404 Error{% else %}An error occurred{% endif %}</h3>
+            </header>
+
+            <div class="row">
+                <div class="col-sm-8">
+                    {% if 404 == code %}
+                        <p>Oops, it looks like you're lost. Let Marvin help you find your way back.</p>
+
+                        <p>Maybe you're looking for one of these pages:</p>
+
+                        <ul>
+                            {% for item in app.menu %}
+                                <li>
+                                    <a href="{% if loop.first %}{{ path('page') }}{% else %}{{ path('page', { slug: item.slug }) }}{% endif %}">{{ item.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        <br>
+                        <blockquote>
+                            "Here I am, brain the size of a planet and they ask me to take you down to the bridge. Call that job satisfaction? ‘Cos I don’t." <small>Marvin</small>
+                        </blockquote>
+                    {% else %}
+                        <p>We're sorry. An error occurred and it looks like it wasn't your fault, but Marvin's.</p>
+                        <br>
+                        <blockquote><span class="text-muted">Marvin:</span> That ship hated me.<br>
+                            <span class="text-muted">Ford:</span> Ship? What happened to it? Do you know?<br>
+                            <span class="text-muted">Marvin:</span> It hated me because I talked to it.<br>
+                            <span class="text-muted">Ford:</span> You talked to it? What do you mean you talked to it?<br>
+                            <span class="text-muted">Marvin:</span> Simple. I got very bored and depressed, so I went and plugged myself into its external computer feed. I talked to the computer at great length and explained my view of the universe to it.<br>
+                            <span class="text-muted">Ford:</span> And what happened?<br>
+                            <span class="text-muted">Marvin:</span> It committed suicide.
+                        </blockquote>
+                    {% endif %}
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img src="/assets/marvin/marvin/images/marvin.jpg" alt="Marvin">
+                </div>
+            </div>
+
+            <br><br><br><br>
+            <hr>
+            <footer>
+                Image source: "<a href="http://en.wikipedia.org/wiki/File:Marvin_(HHGG).jpg#mediaviewer/File:Marvin_(HHGG).jpg">Marvin (HHGG)</a>" by <a rel="nofollow" class="external free" href="http://hitchhikers.movies.go.com/downloads/h2g21024x768b.jpg">http://hitchhikers.movies.go.com/downloads/h2g21024x768b.jpg</a> Marvin (HHGG).jpg. Licensed under <a href="//en.wikipedia.org/wiki/File:Marvin_(HHGG).jpg" title="<a href=&quot;//en.wikipedia.org/wiki/Wikipedia:Non-free_use_rationale_guideline&quot; title=&quot;Wikipedia:Non-free use rationale guideline&quot;>Fair use</a> of copyrighted material in the context of <a href=&quot;//en.wikipedia.org/wiki/Marvin_the_Paranoid_Android&quot; title=&quot;Marvin the Paranoid Android&quot;>Marvin the Paranoid Android</a>">Fair use</a> via <a href="//en.wikipedia.org/wiki/">Wikipedia</a>.
+                <br><br>
+                Powered by <a href="http://github.com/orthes/marvin" target="_blank">Marvin</a>, the open source micro CMS
+            </footer>
+        </div>
+    </div>
+{% endblock %}

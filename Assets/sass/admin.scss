@@ -6,6 +6,10 @@ main {
     padding-top: 50px;
 }
 
+footer {
+    margin-bottom: 20px;
+}
+
 .list-group-item.success {
     @extend .list-group-item-success;
 }

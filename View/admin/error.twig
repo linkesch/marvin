@@ -1,5 +1,8 @@
 {% extends "admin/layout.twig" %}
 
+{% block title %}
+    {% if 404 == code %}{{ '404 Error'|trans }}{% else %}{{ 'An error occurred'|trans }}{% endif %} - {{ parent() }}
+{% endblock %}
 {% block header %}{% endblock %}
 {% block menu %}{% endblock %}
 {% block footer %}{% endblock %}
@@ -8,16 +11,16 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <header class="page-header">
-                <h1>DON'T PANIC</h1>
-                <h3>{% if 404 == code %}404 Error{% else %}An error occurred{% endif %}</h3>
+                <h1>{{ "DON'T PANIC"|trans }}</h1>
+                <h3>{% if 404 == code %}{{ '404 Error'|trans }}{% else %}{{ 'An error occurred'|trans }}{% endif %}</h3>
             </header>
 
             <div class="row">
                 <div class="col-sm-8">
                     {% if 404 == code %}
-                        <p>Oops, it looks like you're lost. Let Marvin help you find your way back.</p>
+                        <p>{{ "Oops, it looks like you're lost. Let Marvin help you find your way back."|trans }}</p>
 
-                        <p>Maybe you're looking for one of these pages:</p>
+                        <p>{{ "Maybe you're looking for one of these pages:"|trans }}</p>
 
                         <ul>
                             {% for item in app.menu %}
@@ -28,19 +31,17 @@
                         </ul>
 
                         <br>
-                        <blockquote>
-                            "Here I am, brain the size of a planet and they ask me to take you down to the bridge. Call that job satisfaction? ‘Cos I don’t." <small>Marvin</small>
-                        </blockquote>
+                        <blockquote>{{ "Here I am, brain the size of a planet and they ask me to take you down to the bridge. Call that job satisfaction? ‘Cos I don’t."|trans }} <small>Marvin</small></blockquote>
                     {% else %}
                         <p>We're sorry. An error occurred and it looks like it wasn't your fault, but Marvin's.</p>
                         <br>
-                        <blockquote><span class="text-muted">Marvin:</span> That ship hated me.<br>
-                            <span class="text-muted">Ford:</span> Ship? What happened to it? Do you know?<br>
-                            <span class="text-muted">Marvin:</span> It hated me because I talked to it.<br>
-                            <span class="text-muted">Ford:</span> You talked to it? What do you mean you talked to it?<br>
-                            <span class="text-muted">Marvin:</span> Simple. I got very bored and depressed, so I went and plugged myself into its external computer feed. I talked to the computer at great length and explained my view of the universe to it.<br>
-                            <span class="text-muted">Ford:</span> And what happened?<br>
-                            <span class="text-muted">Marvin:</span> It committed suicide.
+                        <blockquote><span class="text-muted">Marvin:</span> {{ "That ship hated me."|trans }}<br>
+                            <span class="text-muted">Ford:</span> {{ "Ship? What happened to it? Do you know?"|trans }}<br>
+                            <span class="text-muted">Marvin:</span> {{ "It hated me because I talked to it."|trans }}<br>
+                            <span class="text-muted">Ford:</span> {{ "You talked to it? What do you mean you talked to it?"|trans }}<br>
+                            <span class="text-muted">Marvin:</span> {{ "Simple. I got very bored and depressed, so I went and plugged myself into its external computer feed. I talked to the computer at great length and explained my view of the universe to it."|trans }}<br>
+                            <span class="text-muted">Ford:</span> {{ "And what happened?"|trans }}<br>
+                            <span class="text-muted">Marvin:</span> {{ "It committed suicide."|trans }}
                         </blockquote>
                     {% endif %}
                 </div>

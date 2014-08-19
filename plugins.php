@@ -14,19 +14,15 @@ require __DIR__ .'/middlewares.php';
 $app->mount('/admin', new Marvin\Marvin\Controller\AdminControllerProvider());
 $app->mount('/install', new Marvin\Marvin\Controller\InstallControllerProvider());
 
-
-
 /**
  * Register PLUGINS
  */
 
-foreach($app['config']['plugins'] as $plugin)
-{
+foreach ($app['config']['plugins'] as $plugin) {
     $pluginBootstrap = __DIR__ .'/../'. $plugin .'/bootstrap.php';
     $pluginBootstrap = file_exists($pluginBootstrap) ? $pluginBootstrap : $config['app_dir'] .'/'. $plugin .'/bootstrap.php';
 
-    if(file_exists($pluginBootstrap))
-    {
+    if (file_exists($pluginBootstrap)) {
         require $pluginBootstrap;
     }
 }

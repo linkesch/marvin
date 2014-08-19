@@ -15,34 +15,26 @@ $config['db']['name'] = 'marvin';
 $config['is_installed'] = file_exists($config['db']['path']);
 $config['twig']['paths'][] = __DIR__ .'/View';
 
-
 // Plugin initialization
 $config['plugins'] = array('pages', 'users');
 
-
 // Override defaults by app config
 $appConfigFile = $config['app_dir'] .'/config.php';
-if(file_exists($appConfigFile))
-{
+if (file_exists($appConfigFile)) {
     require $appConfigFile;
 }
-
 
 // Add themes views to twig paths
 $config['twig']['paths'][] = $config['themes_dir'];
 
-
 // Add plugins views to twig paths
-foreach($config['plugins'] as $plugin)
-{
+foreach ($config['plugins'] as $plugin) {
     $pluginViews = __DIR__ .'/../'. $plugin .'/View';
     $pluginViews = file_exists($pluginViews) ? $pluginViews : $config['app_dir'] .'/'. $plugin .'/View';
 
-    if(file_exists($pluginViews))
-    {
+    if (file_exists($pluginViews)) {
         $config['twig']['paths'][] = $pluginViews;
     }
 }
-
 
 return $config;

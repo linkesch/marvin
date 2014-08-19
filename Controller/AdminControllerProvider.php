@@ -4,8 +4,6 @@ namespace Marvin\Marvin\Controller;
 
 use Silex\Application;
 use Silex\ControllerProviderInterface;
-use Symfony\Component\HttpFoundation\Request;
-
 
 class AdminControllerProvider implements ControllerProviderInterface
 {

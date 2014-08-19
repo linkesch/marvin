@@ -4,8 +4,6 @@ namespace Marvin\Marvin\Controller;
 
 use Silex\Application;
 use Silex\ControllerProviderInterface;
-use Symfony\Component\HttpFoundation\Request;
-
 
 class InstallControllerProvider implements ControllerProviderInterface
 {
@@ -21,7 +19,6 @@ class InstallControllerProvider implements ControllerProviderInterface
                 'messages' => $messages,
             ));
         });
-
 
         return $controllers;
     }

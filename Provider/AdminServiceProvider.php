@@ -14,15 +14,12 @@ class AdminServiceProvider implements ServiceProviderInterface
         };
 
         $app['install_status'] = $app->protect(function ($condition, $success, $failure) use ($app) {
-            if($condition)
-            {
+            if ($condition) {
                 $result = array(
                     'type' => 'success',
                     'text' => $app['translator']->trans($success),
                 );
-            }
-            else
-            {
+            } else {
                 $result = array(
                     'type' => 'failure',
                     'text' => $app['translator']->trans($failure),
@@ -34,18 +31,14 @@ class AdminServiceProvider implements ServiceProviderInterface
 
         $app['install'] = $app->protect(function () use ($app) {
             // Installation check
-            if($app['config']['is_installed'])
-            {
+            if ($app['config']['is_installed']) {
                 $messages[] = array(
                     'type' => 'success',
                     'text' => '<strong>Marvin is already installed. Enjoy!</strong><br><br>If you want to reinstall it, please remove a data folder manually and run this installation one more time.',
                 );
-            }
-            else
-            {
+            } else {
                 // Data dir existence check
-                if(file_exists($app['config']['data_dir']) == false)
-                {
+                if (file_exists($app['config']['data_dir']) == false) {
                     // Create data dir
                     $messages[] = $app['install_status'](
                         mkdir($app['config']['data_dir'], 0755),
@@ -69,29 +62,22 @@ class AdminServiceProvider implements ServiceProviderInterface
                 $sm = $app['db']->getSchemaManager();
                 $sm->createDatabase($app['config']['db']['path']);
 
-
                 // Install plugins
-                if(count($app['install_plugins']))
-                {
-                    foreach($app['install_plugins'] as $plugin)
-                    {
+                if (count($app['install_plugins'])) {
+                    foreach ($app['install_plugins'] as $plugin) {
                         $messages = array_merge($messages, $plugin());
                     }
                 }
 
-
                 // Count failures
                 $errors = 0;
-                foreach($messages as $message)
-                {
-                    if($message['type'] == 'failure')
-                    {
+                foreach ($messages as $message) {
+                    if ($message['type'] == 'failure') {
                         $errors++;
                     }
                 }
 
-                if($errors == 0)
-                {
+                if ($errors == 0) {
                     $config = $app['config'];
                     $config['is_installed'] = true;
                     $app['config'] = $config;
@@ -111,8 +97,7 @@ class AdminServiceProvider implements ServiceProviderInterface
         $app['uninstall'] = $app->protect(function () use ($app) {
             $sm = $app['db']->getSchemaManager();
             $tables = $sm->listTableNames();
-            foreach($tables as $table)
-            {
+            foreach ($tables as $table) {
                 $sm->dropTable($table);
             }
             $sm->dropDatabase($app['config']['db']['path']);

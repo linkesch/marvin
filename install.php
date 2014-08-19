@@ -9,8 +9,7 @@ class Install
   public static function postPackageInstall(Event $event)
   {
     $installedPackage = $event->getOperation()->getPackage();
-    if($installedPackage->getName() != 'marvin/marvin')
-    {
+    if ($installedPackage->getName() != 'marvin/marvin') {
       return false;
     }
 
@@ -22,19 +21,14 @@ class Install
 
   public static function copy($source, $dest)
   {
-    if(!file_exists($dest))
-    {
+    if (!file_exists($dest)) {
       mkdir($dest, 0755, true);
     }
 
-    foreach($iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) as $item)
-    {
-      if($item->isDir())
-      {
+    foreach ($iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) as $item) {
+      if ($item->isDir()) {
         mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
-      }
-      else
-      {
+      } else {
         copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
       }
     }

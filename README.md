@@ -38,6 +38,15 @@ It's distributed via [Composer](https://getcomposer.org/) and frontend uses full
 And the best part? It's **open source and free under MIT license**.
 
 
+## Demo
+
+Live demo could be found here: [http://marvin.linkesch.sk](http://marvin.linkesch.sk)
+
+Administration is in [/admin](http://marvin.linkesch.sk/admin) folder and you can use "**admin**" as a username and "**foo**" as a password.
+
+The live demo's database is automatically refreshed every 10 minutes.
+
+
 ## Plugins
 
 Marvin consists of separate plugins, so for each project you can pick precisely only what you need.

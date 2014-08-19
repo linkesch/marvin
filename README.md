@@ -55,6 +55,7 @@ Currently available plugins:
 
 - [Pages](https://github.com/orthes/marvin-pages) *
 - [Users](https://github.com/orthes/marvin-users) *
+- [Articles](https://github.com/orthes/marvin-articles)
 
 Plugins marked with an asterisk (*) are core necessary files needed for Marvin's basic functioning.
 
@@ -91,7 +92,7 @@ That's it. Now you can visit your new website powered by Marvin in a browser. Yo
 automatically run final installation steps and you are ready to go.
 
 
-# Administration
+## Administration
 
 Administration could be found in **/admin** folder. Default administrator's credentials are:
 
@@ -99,9 +100,9 @@ Administration could be found in **/admin** folder. Default administrator's cred
 - Password: **foo**
 
 
-## Warning
+## Documentation
 
-Marvin is currently under intense development and is not ready to use in a production yet.
+Coming soon...
 
 
 ## Author

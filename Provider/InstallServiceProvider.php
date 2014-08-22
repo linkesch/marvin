@@ -5,7 +5,7 @@ namespace Marvin\Marvin\Provider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
-class AdminServiceProvider implements ServiceProviderInterface
+class InstallServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {
@@ -57,6 +57,15 @@ class AdminServiceProvider implements ServiceProviderInterface
                     'DB file was created.',
                     'Problem creating DB file possibly due to permission settings in the data folder.'
                 );
+
+                if (file_exists(__DIR__ ."/../Themes")) {
+                    \Marvin\Marvin\Install::copy(__DIR__ ."/../Themes", $app['config']['themes_dir']);
+                    $messages[] = $app['install_status'](
+                        true,
+                        'Core theme files were installed',
+                        null
+                    );
+                }
 
                 // Create database
                 $sm = $app['db']->getSchemaManager();

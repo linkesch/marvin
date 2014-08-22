@@ -15,14 +15,27 @@ class Install
 
         $config = require 'config.php';
 
+        // Copy web dir
         self::copy(__DIR__ ."/Web", $config['web_dir']);
 
-        $plugins = glob(__DIR__ .'/../*');
+        // Create app/config.php to allow installation
+        $appConfig = $config['app_dir'] .'/config.php';
+        if (file_exists($appConfig) == false) {
+            $fp = fopen($appConfig, 'w');
+            fwrite($fp, '<?php
+
+$app["debug"] = true;
+');
+            fclose($fp);
+        }
+
+
+        /*$plugins = glob(__DIR__ .'/../*');
         foreach ($plugins as $plugin) {
             if (file_exists($plugin ."/Themes")) {
                 self::copy($plugin ."/Themes", $config['themes_dir']);
             }
-        }
+        }*/
     }
 
     public static function copy($source, $dest)

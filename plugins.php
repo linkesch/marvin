@@ -12,9 +12,7 @@ require __DIR__ .'/middlewares.php';
 
 // Mount core controller provider
 $app->mount('/admin', new Marvin\Marvin\Controller\AdminControllerProvider());
-if ($app['debug']) {
-    $app->mount('/install', new Marvin\Marvin\Controller\InstallControllerProvider());
-}
+$app->mount('/install', new Marvin\Marvin\Controller\InstallControllerProvider());
 
 /**
  * Register PLUGINS

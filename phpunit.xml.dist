@@ -8,11 +8,11 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="../../../autoload.php"
+         bootstrap="../../autoload.php"
 >
     <testsuites>
         <testsuite name="marvin">
-            <directory>./</directory>
+            <directory>./Test/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

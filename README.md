@@ -107,4 +107,4 @@ Coming soon...
 
 ## Author
 
-Pavel Linkesch | [@linkesch](http://twitter.com/linkesch) | [http://www.linkesch.sk](http://www.linkesch.sk)
+Pavel Linkesch | [@linkesch](http://twitter.com/linkesch) | [http://www.linkesch.sk](http://linkesch.sk)

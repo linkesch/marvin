@@ -2,7 +2,7 @@
 
 use Marvin\Marvin\Test\FunctionalTestCase;
 
-class adminTest extends FunctionalTestCase
+class AdminTest extends FunctionalTestCase
 {
     public function testFreshInstall()
     {
@@ -11,7 +11,7 @@ class adminTest extends FunctionalTestCase
         });
 
         $client = $this->createClient();
-        $crawler = $client->request('GET', '/install');
+        $client->request('GET', '/install');
 
         $this->assertTrue($client->getResponse()->isOk());
     }

@@ -14,7 +14,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => $app['config']['twig']['paths'],
     'twig.form.templates' => array('form/bootstrap.twig'),
 ));
-$app['twig'] = $app->share($app->extend('twig', function ($twig, $app) {
+$app['twig'] = $app->share($app->extend('twig', function (\Twig_Environment $twig, $app) {
     $twig->addExtension(new Marvin\Marvin\Twig\BootstrapFormExtension());
     $twig->addExtension(new Marvin\Marvin\Twig\BootstrapIconExtension('glyphicon'));
 

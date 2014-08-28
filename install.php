@@ -28,14 +28,6 @@ $app["debug"] = true;
 ');
             fclose($fp);
         }
-
-
-        /*$plugins = glob(__DIR__ .'/../*');
-        foreach ($plugins as $plugin) {
-            if (file_exists($plugin ."/Themes")) {
-                self::copy($plugin ."/Themes", $config['themes_dir']);
-            }
-        }*/
     }
 
     public static function copy($source, $dest)

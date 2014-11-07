@@ -17,6 +17,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app['twig'] = $app->share($app->extend('twig', function (\Twig_Environment $twig, $app) {
     $twig->addExtension(new Marvin\Marvin\Twig\BootstrapFormExtension());
     $twig->addExtension(new Marvin\Marvin\Twig\BootstrapIconExtension('glyphicon'));
+    $twig->addFilter(require 'Twig/PathsFilter.php');
 
     return $twig;
 }));

@@ -27,8 +27,8 @@
         "symfony/browser-kit": ">=2.3,<2.4-dev",
         "symfony/css-selector": "2.4.4",
         "symfony/security": "~2.3",
-        "marvin/pages": "0.0.5",
-        "marvin/users": "0.0.3"
+        "marvin/pages": "~0.0.5",
+        "marvin/users": "~0.0.3"
     },
     "autoload": {
         "psr-4": {

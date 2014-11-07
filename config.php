@@ -2,6 +2,11 @@
 
 // Default config
 $config['env'] = isset($env) ? $env : 'prod';
+
+$config['website']['name'] = 'Marvin';
+$config['website']['description'] = 'Marvin is a micro CMS for PHP 5.3';
+$config['website']['url'] = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['HTTP_HOST'];
+
 $config['base_dir'] = __DIR__.'/../../..';
 $config['app_dir'] = $config['base_dir'] .'/app';
 $config['data_dir'] = $config['base_dir'] .'/data';

@@ -3,7 +3,7 @@
     "description": "PHP micro CMS based on Silex framework",
     "homepage": "http://github.com/orthes/marvin",
     "keywords": ["cms", "micro cms", "simple cms", "silex"],
-    "version": "0.0.5",
+    "version": "0.1",
     "license": "MIT",
     "authors": [
         {
@@ -27,8 +27,8 @@
         "symfony/browser-kit": ">=2.3,<2.4-dev",
         "symfony/css-selector": "2.4.4",
         "symfony/security": "~2.3",
-        "marvin/pages": "~0.0.5",
-        "marvin/users": "~0.0.3"
+        "marvin/pages": "~0.1",
+        "marvin/users": "~0.1"
     },
     "autoload": {
         "psr-4": {

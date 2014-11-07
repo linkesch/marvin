@@ -65,7 +65,7 @@ Plugins marked with an asterisk (*) are core necessary files needed for Marvin's
 ### Via an Archive
 
 The best way to download and install Marvin is via Composer (see lower), but if you're not comfortable with it,
-you can start by downloading an archive with everything included: [Download Marvin 0.1 as **ZIP**](https://github.com/orthes/marvin/releases/download/0.1/marvin.zip).
+you can start by downloading an archive with everything included: [Download Marvin 0.1.2 as **ZIP**](https://github.com/orthes/marvin/releases/download/0.1.2/marvin.zip).
 
 ### Via Composer
 

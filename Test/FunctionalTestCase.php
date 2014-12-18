@@ -10,6 +10,11 @@ class FunctionalTestCase extends WebTestCase
     {
         $env = 'test';
         $app = require __DIR__.'/../bootstrap.php';
+
+        $app["swiftmailer.transport"] = new \Swift_Transport_NullTransport($app['swiftmailer.transport.eventdispatcher']);
+        $app['mailer.logger'] = new MessageLogger();
+        $app['mailer']->registerPlugin($app['mailer.logger']);
+
         $app['debug'] = true;
         $app['exception_handler']->disable();
         $app['session.test'] = true;
@@ -24,7 +29,7 @@ class FunctionalTestCase extends WebTestCase
 
         $form = $crawler->selectButton('login')->form();
         $crawler = $client->submit($form, array(
-            '_username' => 'admin',
+            '_username' => 'admin@test.com',
             '_password' => 'foo',
         ));
     }

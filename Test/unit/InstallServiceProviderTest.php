@@ -2,7 +2,7 @@
 
 use Marvin\Marvin\Test\FunctionalTestCase;
 
-class AdminServiceProviderTest extends FunctionalTestCase
+class InstallServiceProviderTest extends FunctionalTestCase
 {
     public function testInstallStatusSuccess()
     {

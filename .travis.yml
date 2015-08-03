@@ -8,3 +8,4 @@ install: composer install
 cache:
   directories:
     - vendor
+    - $HOME/.composer/cache

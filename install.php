@@ -2,11 +2,11 @@
 
 namespace Marvin\Marvin;
 
-use Composer\Script\Event;
+use Composer\Installer\PackageEvent;
 
 class Install
 {
-    public static function postPackageInstall(Event $event)
+    public static function postPackageInstall(PackageEvent $event)
     {
         $installedPackage = $event->getOperation()->getPackage();
         if ($installedPackage->getName() != 'marvin/marvin') {

@@ -41,7 +41,7 @@ class InstallServiceProvider implements ServiceProviderInterface
                 if (file_exists($app['config']['data_dir']) == false) {
                     // Create data dir
                     $messages[] = $app['install_status'](
-                        mkdir($app['config']['data_dir'], 0777),
+                        mkdir($app['config']['data_dir'], 0755),
                         'Data folder was created.',
                         'Problem creating a data folder possibly due to permission settings in the main folder of your application.'
                     );

@@ -38,7 +38,7 @@ class InstallServiceProvider implements ServiceProviderInterface
                 );
             } else {
                 // Data dir existence check
-                if (file_exists($app['config']['data_dir']) == false) {
+                if (file_exists($app['config']['data_dir']) === false) {
                     // Create data dir
                     $messages[] = $app['install_status'](
                         mkdir($app['config']['data_dir'], 0755),

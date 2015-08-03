@@ -19,13 +19,13 @@ class Install
         self::copy(__DIR__ ."/Web", $config['web_dir']);
 
         // Create app/ folder
-        if (file_exists($config['app_dir']) == false) {
+        if (file_exists($config['app_dir']) === false) {
             mkdir($config['app_dir'], 0755);
         }
 
         // Create app/config.php to allow installation
         $appConfig = $config['app_dir'] .'/config.php';
-        if (file_exists($appConfig) == false) {
+        if (file_exists($appConfig) === false) {
             $fp = fopen($appConfig, 'w');
             fwrite($fp, '<?php
 
@@ -46,7 +46,7 @@ $config["website"]["url"] = "http://marvin.linkesch.sk";
         }
 
         foreach ($iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS), \RecursiveIteratorIterator::SELF_FIRST) as $item) {
-            if ($item->isDir() && file_exists($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName()) == false) {
+            if ($item->isDir() && file_exists($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName()) === false) {
                 mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
             } elseif ($item->isFile()) {
                 copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());

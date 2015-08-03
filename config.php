@@ -16,7 +16,7 @@ $config['web_dir'] = $config['base_dir'] .'/web';
 $config['upload_dir'] = $config['web_dir'] .'/uploads';
 $config['public_upload_dir'] = '/uploads';
 $config['theme'] = 'default';
-$config['db']['path'] = $config['data_dir'] . ($config['env'] == 'test' ? '/test.db' : '/app.db');
+$config['db']['path'] = $config['data_dir'] .'/app.db';
 $config['db']['name'] = 'marvin';
 $config['is_installed'] = file_exists($config['db']['path']);
 $config['twig']['paths'][] = __DIR__ .'/View';

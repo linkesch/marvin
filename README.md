@@ -1,7 +1,7 @@
 Marvin
 ======
 
-Marvin is a **micro CMS** for PHP 5.3.
+Marvin is a **micro CMS** for PHP 5.3+.
 
 
 ## Why micro CMS?
@@ -22,7 +22,7 @@ make users just confused, it enables them to screw things up and that makes them
 >
 > Marvin: "Wrong. You see?"
 
-Marvin is [a robot with a brain big as a planet](http://en.wikipedia.org/wiki/Marvin_the_Paranoid_Android) and also a simple CMS for PHP 5.3.
+Marvin is [a robot with a brain big as a planet](http://en.wikipedia.org/wiki/Marvin_the_Paranoid_Android) and also a simple CMS for PHP 5.3+.
 
 But Marvin is not yet another CMS you need to learn from ground up. It is based on wonderful [Silex framework](http://silex.sensiolabs.org)
 which is build on the shoulders of Symfony2 and Pimple. That means it's fully tested and verified by thousands of developers.
@@ -56,16 +56,12 @@ Currently available plugins:
 - [Pages](https://github.com/orthes/marvin-pages) *
 - [Users](https://github.com/orthes/marvin-users) *
 - [Articles](https://github.com/orthes/marvin-articles)
+- [**How to create a custom plugin**](https://github.com/orthes/marvin/wiki/Plugins)
 
 Plugins marked with an asterisk (*) are core necessary files needed for Marvin's basic functioning.
 
 
 ## Download and Installation
-
-### Via an Archive
-
-The best way to download and install Marvin is via Composer (see lower), but if you're not comfortable with it,
-you can start by downloading an archive with everything included: [Download Marvin 0.1.4 as **ZIP**](https://github.com/orthes/marvin/releases/download/0.1.4/marvin.zip).
 
 ### Via Composer
 
@@ -91,6 +87,11 @@ The **recommended** way to start with Marvin is via Composer:
 That's it. Now you can visit your new website powered by Marvin in a browser. You will see, that it will
 automatically run final installation steps and you are ready to go.
 
+### Via an Archive
+
+The best way to download and install Marvin is via Composer (see above), but if you're not comfortable with it,
+you can start by downloading an archive with everything included: [Download Marvin 0.1.4 as **ZIP**](https://github.com/orthes/marvin/releases/download/0.1.4/marvin.zip).
+
 
 ## Administration
 
@@ -102,7 +103,12 @@ Administration could be found in **/admin** folder. Default administrator's cred
 
 ## Documentation
 
-Coming soon...
+- [Installation](https://github.com/orthes/marvin/wiki/Installation)
+- [Folder Structure](https://github.com/orthes/marvin/wiki/Folder-Structure)
+- [Configuration](https://github.com/orthes/marvin/wiki/Configuration)
+- [Usage](https://github.com/orthes/marvin/wiki/Usage)
+- [Themes](https://github.com/orthes/marvin/wiki/Themes)
+- [Plugins](https://github.com/orthes/marvin/wiki/Plugins)
 
 
 ## Author

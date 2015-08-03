@@ -104,12 +104,14 @@ class InstallServiceProvider implements ServiceProviderInterface
         });
 
         $app['uninstall'] = $app->protect(function () use ($app) {
-            $sm = $app['db']->getSchemaManager();
-            $tables = $sm->listTableNames();
-            foreach ($tables as $table) {
-                $sm->dropTable($table);
+            if (file_exists($app['config']['db']['path'])) {
+                $sm = $app['db']->getSchemaManager();
+                $tables = $sm->listTableNames();
+                foreach ($tables as $table) {
+                    $sm->dropTable($table);
+                }
+                $sm->dropDatabase($app['config']['db']['path']);
             }
-            $sm->dropDatabase($app['config']['db']['path']);
 
             $config = $app['config'];
             $config['is_installed'] = false;

@@ -1,6 +1,13 @@
 Marvin
 ======
 
+[![Latest Stable Version](https://poser.pugx.org/marvin/marvin/v/stable)](https://packagist.org/packages/marvin/marvin)
+[![Total Downloads](https://poser.pugx.org/marvin/marvin/downloads)](https://packagist.org/packages/marvin/marvin)
+[![Latest Unstable Version](https://poser.pugx.org/marvin/marvin/v/unstable)](https://packagist.org/packages/marvin/marvin)
+[![License](https://poser.pugx.org/marvin/marvin/license)](https://packagist.org/packages/marvin/marvin)
+[![Build Status](https://travis-ci.org/orthes/marvin.svg?branch=master)](https://travis-ci.org/orthes/marvin)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/9b0c1fb0-ae10-4270-9445-8c6a7d6a0fcb/mini.png)](https://insight.sensiolabs.com/projects/9b0c1fb0-ae10-4270-9445-8c6a7d6a0fcb)
+
 Marvin is a **micro CMS** for PHP 5.3+.
 
 ![Marvin 01](http://i.imgur.com/sEkYLmj.png)

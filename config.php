@@ -8,7 +8,7 @@ $config['website']['description'] = 'Marvin is a micro CMS for PHP 5.3';
 $config['website']['url'] = 'http://marvin.linkesch.sk';
 $config['website']['email'] = 'your@email.com';
 
-$config['base_dir'] = __DIR__ . ($config['env'] == 'test' ? '' : '/../../..');
+$config['base_dir'] = __DIR__ .'/../../..';
 $config['app_dir'] = $config['base_dir'] .'/app';
 $config['data_dir'] = $config['base_dir'] .'/data';
 $config['themes_dir'] = $config['base_dir'] .'/app/themes';

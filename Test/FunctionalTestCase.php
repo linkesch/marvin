@@ -11,9 +11,11 @@ class FunctionalTestCase extends WebTestCase
         $env = 'test';
         $app = require __DIR__.'/../bootstrap.php';
 
-        $app["swiftmailer.transport"] = new \Swift_Transport_NullTransport($app['swiftmailer.transport.eventdispatcher']);
-        $app['mailer.logger'] = new MessageLogger();
-        $app['mailer']->registerPlugin($app['mailer.logger']);
+        if (isset($app['swiftmailer.transport.eventdispatcher'])) {
+            $app["swiftmailer.transport"] = new \Swift_Transport_NullTransport($app['swiftmailer.transport.eventdispatcher']);
+            $app['mailer.logger'] = new MessageLogger();
+            $app['mailer']->registerPlugin($app['mailer.logger']);
+        }
 
         $app['debug'] = true;
         $app['exception_handler']->disable();

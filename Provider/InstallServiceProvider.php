@@ -37,6 +37,16 @@ class InstallServiceProvider implements ServiceProviderInterface
                     'text' => '<strong>Marvin is already installed. Enjoy!</strong><br><br>If you want to reinstall it, please remove a data folder manually and run this installation one more time.',
                 );
             } else {
+                // Base dir existence check
+                if (file_exists($app['config']['base_dir']) === false) {
+                    // Create data dir
+                    $messages[] = $app['install_status'](
+                        mkdir($app['config']['base_dir'], 0755),
+                        'Base folder was created.',
+                        'Problem creating a base folder possibly due to permission settings in the main folder of your application.'
+                    );
+                }
+
                 // Data dir existence check
                 if (file_exists($app['config']['data_dir']) === false) {
                     // Create data dir

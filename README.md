@@ -3,6 +3,9 @@ Marvin
 
 Marvin is a **micro CMS** for PHP 5.3+.
 
+![Marvin 01](http://i.imgur.com/sEkYLmj.png)
+![Marvin 02](http://i.imgur.com/tOPgRYR.png)
+
 
 ## Why micro CMS?
 

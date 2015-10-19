@@ -50,9 +50,9 @@ And the best part? It's **open source and free under MIT license**.
 
 ## Demo
 
-Live demo could be found here: [http://marvin.linkesch.sk](http://marvin.linkesch.sk)
+Live demo could be found here: [http://marvin.linkesch.com](http://marvin.linkesch.com)
 
-Administration is in [/admin](http://marvin.linkesch.sk/admin) folder and you can use "**admin**" as a username and "**foo**" as a password.
+Administration is in [/admin](http://marvin.linkesch.com/admin) folder and you can use "**admin**" as a username and "**foo**" as a password.
 
 The live demo's database is automatically refreshed every 10 minutes.
 
@@ -123,4 +123,4 @@ Administration could be found in **/admin** folder. Default administrator's cred
 
 ## Author
 
-Pavel Linkesch | [@linkesch](http://twitter.com/linkesch) | [http://www.linkesch.sk](http://linkesch.sk)
+Pavel Linkesch | [@linkesch](http://twitter.com/linkesch) | [http://www.linkesch.com](http://linkesch.com)
